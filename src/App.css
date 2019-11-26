@@ -1,22 +1,161 @@
-.App {
-  text-align: center;
+header, main, .container, .todo-wrapper
+{
+    border: 1px solid black;
 }
 
-.App-logo {
-  height: 40vmin;
+
+header
+{
+    width: 1250px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    border: 10px ridge lightpink;
+    overflow: hidden;
+    letter-spacing: 5px;
+
+    background-color: lavender;
+    -webkit-animation-name: example; 
+    -webkit-animation-duration: 4s;
+    animation-iteration-count: 4;
+
+    animation: text 3s 1;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span
+{
+    animation: text 3s 1;
 }
 
-.App-link {
-  color: #09d3ac;
+@-webkit-keyframes example 
+{
+    0%   {background-color: lavender}
+    25%  {background-color: lightpink}
+    50%  {background-color: lightcyan}
+    100% {background-color: lightgray}
 }
+
+@keyframes text 
+{
+    0% 
+    {
+        color: thistle;
+        margin-bottom: -40px;
+    }
+    30% 
+    {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+}
+  
+input[type = "checkbox"]
+{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    transition: .5s;
+
+}
+
+input:checked[type = "checkbox"]
+{
+
+    background: #03a9f4;
+
+}
+
+input[type = "checkbox"]:before 
+{
+    content: ' ';
+    position: absolute;
+    width: 17px;
+    height: 20px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+
+input:checked[type = "checkbox"]:before 
+{
+    left: 20px;
+}
+
+
+main
+{
+    border: 3px solid lightpink;
+    padding: 0px 50px 0px 50px;
+    flex-direction: column;
+    background-color: lavender;
+    
+}
+
+button
+{
+
+    border-radius: 8px;
+    background-color: gainsboro;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    float: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+.action-row
+{
+    justify-content: flex-end;
+}
+
+.container
+{
+    padding: 20px;
+    border: 3px solid lightpink;
+}
+
+.todo-wrapper
+{
+    border: 3px solid lightpink;
+    padding: 5px;
+    margin: 5px 0px;
+    justify-content: space-between;
+}
+
+.flex
+{
+    display: flex;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+input[type=text]
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    background-color: lightpink;
+    
+}
+
+input[type=text]:focus {
+    border: 2px solid black;
+  }
