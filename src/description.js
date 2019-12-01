@@ -17,7 +17,7 @@ class Description extends Component {
                     <div className="todo-wrapper flex">
     
                         <div className="flex" id="description">
-                            <span>{this.props.name}</span>
+                         <span > {this.props.name}</span> 
                         </div>
     
                         <div className="flex">
